@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .skills {
+            height: 20vh;
+            background-color: azure;
+            padding: 0 5%;
+        }
+        .skill{
+            margin: 10px 0;
+        }
+        .skill-name {
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .skill-bar {
+            height: 10px;;
+            background-color: gainsboro;
+            border-radius: 5px;
+        }
+        .skill-per{
+            height: 10px;
+            background-color: deepskyblue;
+            border-radius: 5px;
+            position: relative;
+            animation: bar-animation 3s ease .5s;
+        }
+        .skill-per::before{
+            content: attr(per);
+            position: absolute;
+            top: -22px;
+            right: 0;
+            color: deepskyblue;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        @keyframes bar-animation {
+            from{
+                width: 0;
+            }
+            to{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="skills">
+        <div class="skill">
+            <div class="skill-name">HTML5</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="100%" style="max-width: 100%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">CSS3</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="98%" style="max-width: 98%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Bootstrap5</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="96%" style="max-width: 96%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Tailwind CSS</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="94%" style="max-width: 94%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="92%" style="max-width: 92%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">React</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
